@@ -4,8 +4,8 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 251, 107, 178; /* fusia */
+  --background-end-rgb: 202, 123, 223; /* morado */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,6 +16,8 @@
   }
 }
 
+
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -25,3 +27,44 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* Estilos personalizados */
+.square-image-wrapper {
+  position: relative;
+  width: 90%; 
+  height: 120%; 
+  overflow: hidden;
+}
+
+.square-image-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-block: 10;
+  width: 140%;
+  height: 190%;
+}
+
+
+.image-hover-shadow {
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.image-hover-shadow:hover {
+  box-shadow: 0 8px 29px 6px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.15);
+}
+
+
+
+.img-hovered {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.05); 
+}
+
+
+.image-hover-pointer {
+  cursor: pointer;
+}
+
+
